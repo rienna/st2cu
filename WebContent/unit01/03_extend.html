@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="euc-kr">
+		<title>Sencha Touch</title>
+		
+		<script type="text/javascript" src="../framework/sencha-touch-debug.js"></script>	
+
+		<script type="text/javascript">
+			Ext.define("User", {
+				constructor: function (config) {
+					this.initConfig(config);
+				},
+				config: {
+					name: null,
+					age: null
+				}
+			});
+
+			Ext.define("Member", {
+				extend: "User",
+				constructor: function (config) {
+					this.initConfig(config);
+				},
+				config: {
+					mid: null
+				}
+			});
+
+			var member = Ext.create("Member", {
+				name: "Sencha Touch",
+				age: 2,
+				mid: "st"
+			});
+
+			console.log(member.getName());
+			console.log(member.getAge());
+			console.log(member.getMid());
+		</script>						
+	</head>
+	<body>	
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="euc-kr">
+		<title>Sencha Touch</title>
+		
+		<script type="text/javascript" src="../framework/sencha-touch-debug.js"></script>	
+
+		<script type="text/javascript">
+			//클래스 정의
+			Ext.define("User", {
+				name:null,
+				constructor:function(name) {
+					this.name = name;
+				},
+				getName:function() {
+					return this.name;
+				}
+			});
+			//객체 생성
+			var user1 = new User("Sencha");
+			var user2 = Ext.create("User", "Touch");
+			//필드값 읽기
+			console.log("user1.name:" + user1.name);
+			console.log("user2.name:" + user2.name);
+			//필드값 수정
+			user1.name = "Touch";
+			user2.name = "Sencha"
+			//메소드 호출
+			console.log("user1.name:" + user1.getName());
+			console.log("user2.name:" + user2.getName());
+		</script>						
+	</head>
+	<body>	
+	</body>
+</html>

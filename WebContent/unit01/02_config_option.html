@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="euc-kr">
+		<title>Sencha Touch</title>
+		
+		<script type="text/javascript" src="../framework/sencha-touch-debug.js"></script>	
+
+		<script type="text/javascript">
+			Ext.define("User", {
+				constructor: function (config) {
+					this.initConfig(config);
+				},
+				config: {
+					name: null,
+					age: null
+				}
+			});
+
+			var user = Ext.create("User", {
+				name: "Sencha Touch",
+				age: 2
+			});
+
+			console.log(user.getName());
+			console.log(user.getAge());
+
+			user.setName("Mobile WebApp");
+			user.setAge(3);
+
+			console.log(user.getName());
+			console.log(user.getAge());
+		</script>						
+	</head>
+	<body>	
+	</body>
+</html>
